@@ -20,7 +20,6 @@ We are maintaining a master branch for production code and adding branches for f
 3. Code a feature. Include tests and comments.
 4. Push your branch to GitHub, make sure to include a commit message explaining what you've done.
 5. Issue a pull request.
-6. Notify our Slack Channel of the PR.
 
 === Code Review - Any team member can - and should! - review code from pull requests.
 1. Verify that the build is successful.
