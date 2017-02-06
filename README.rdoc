@@ -1,7 +1,7 @@
 = README
 
 == On the Web
-h/t {ChessOnRails}[https://rescueseniors.herokuapp.com]
+h/t {RescueSeniors}[https://rescueseniors.herokuapp.com]
 
 == Toolkit
 Platform:: Ruby on Rails
@@ -19,7 +19,6 @@ We are maintaining a master branch for production code and adding branches for f
 2. Checkout a new branch for your feature
 3. Code a feature. Include tests and comments.
 4. Push your branch to GitHub, make sure to include a commit message explaining what you've done.
-<!-- 5. Check Codeship to make sure your build is successful. -->
 5. Issue a pull request.
 6. Notify our Slack Channel of the PR.
 
@@ -32,4 +31,4 @@ We are maintaining a master branch for production code and adding branches for f
 6. Delete the originating branch.
 
 == Resources
-<!-- {Database Structure}[https://docs.google.com/spreadsheets/d/1U6PVZMdwzPTlbhwlHk97xK8jz1BOdmOPv3s7rnmpGvA/edit#gid=1549687874] -->
+TBD
