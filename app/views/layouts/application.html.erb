@@ -21,7 +21,7 @@
           <!-- <a href="/" class="navbar-brand"><i class="fa fa-heartbeat"></i> RescueSeniors</a> -->
           <%= link_to root_path, class: "navbar-brand" do %>
             <i class="fa fa-heartbeat"></i>
-            RescueSeniors
+            RescueSenior
           <% end %>
         </div>
         <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -33,7 +33,7 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-    
+
     <div class="flash-container">
       <% flash.each do |type, msg| %>
         <%= content_tag :div, msg, class: "alert alert-#{type}" %>
