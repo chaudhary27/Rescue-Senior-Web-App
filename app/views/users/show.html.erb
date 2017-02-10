@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 text-center">
+      <%= image_tag @user.profile.avatar.url, class: 'avatar-show-img' %>
+    </div>
+
+    <div class="col-md-6">
+      <h1><%= @user.profile.first_name %>  <%= @user.profile.last_name %></h1> <br>
+      <h3><span class="health-band-icon"><%= health_band_icon %></span> Tracking Health via <%= @user.profile.health_band %></h3>
+        <div class="well profile-block profile-contact-info">
+          <h3>Contact Information</h3> <br>
+          <h4>Phone Number: <%= @user.profile.phone_number %> </h4>
+          <h4>Age: <%= @user.profile.age %></h4>
+          <h4>Height: <%= @user.profile.height_feet %>' <%= @user.profile.height_inches %>''</h4>
+          <h4>Contact Email: <%= @user.profile.contact_email %></h4>
+        </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well profile-block profile-contact-info">
+        <h1>Health Dashboard</h1>
+        <h3><i class="fa fa-heartbeat"></i> Heart Rate: 126 BPM</h3>
+        <h3>Footstep count:</h3>
+        <h3>Skip Temperature:</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
