@@ -1,22 +1,24 @@
 = README
 
 == On the Web
-h/t {RescueSeniors}[https://rescueseniors.herokuapp.com]
+h/t {RescueSenior Mobile App}[https://creator.ionic.io/share/9be786b005a0]
 
 == Toolkit
-Platform:: Ruby on Rails
+Platform:: Ionic, AngularJS, HTML5/CSS3
 Source Control:: Git/Github
-Local Database:: SQLite
-Production Database:: PostgreSQL
-Deployment Platform:: Heroku
-Front End Framework:: Bootstrap/HTML/CSS/JS
+Database:: Local phone storage, Firebase
+Deployment Platform:: Android, iOS, Windows
+Front End Framework:: Bootstrap mobile, HTML5/SASSY
 APIS Integration:: Google Maps/Estimote Beacons/Fitbit
+Endpoint Integration :: Rescue Senior web application
 
 == Run the application locally
 1. Clone the repo
 2. cd to the app dir
-3. run **bundle install** to download all the gems
-4. run **rails s** and navigate to localhost in your browser
+3. Run **npm install** to download all the gems
+4. Run **ionic serve** and navigate to localhost in your browser
+5. Run **ionic serve -l** to see the app in mobile platform
+6. Run the app locally by adding mobile platform plugins
 
 == Our Workflow
 Contributing to RescueSeniors is super simple, and we like it that way.
