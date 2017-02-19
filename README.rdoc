@@ -13,8 +13,8 @@ Front End Framework:: Bootstrap
 == Run the application locally
 1. Clone the repo
 2. cd to the app dir
-3. run *bundle install* to download all the gems
-4. run *rails s* and navigate to localhost in your browser
+3. run **bundle install** to download all the gems
+4. run **rails s** and navigate to localhost in your browser
 
 == Our Workflow
 Contributing to RescueSeniors is super simple, and we like it that way.
