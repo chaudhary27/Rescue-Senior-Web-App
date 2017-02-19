@@ -6,11 +6,11 @@ h/t {RescueSeniors}[https://rescueseniors.herokuapp.com]
 == Toolkit
 Platform:: Ruby on Rails
 Source Control:: Git/Github
-Local Database: SQLite
-Production Database: PostgreSQL
+Local Database:: SQLite
+Production Database:: PostgreSQL
 Deployment Platform:: Heroku
 Front End Framework:: Bootstrap/HTML/CSS/JS
-APIS Integration: Google Maps, Estimote Beacons, Fitbit
+APIS Integration: Google Maps/Estimote Beacons/Fitbit
 
 == Run the application locally
 1. Clone the repo
