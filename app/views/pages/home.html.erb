@@ -24,8 +24,8 @@
         <h2 class="text-center">
           Enable Location Tracking
         </h2>
-        <p>This will allow us to send help in case of emergency.</p>
-        <%= link_to "Enable Beacon Location", '#', class: 'btn btn-default btn-lg btn-block' %>
+        <p>Download our app. This will allow us to send help in case of emergency.</p>
+        <%= link_to "Enable Beacon Location", 'https://creator.ionic.io/share/9be786b005a0', class: 'btn btn-default btn-lg btn-block', target: '_blank' %>
       </div>
     </div>
     <% else %>
@@ -42,24 +42,104 @@
         <h2 class="text-center">Enable Location Beacon</h2>
         <h4 class="text-center">This will help us send help in case of emergency.</h4>
         <br>
-        <%= link_to "Allow location tracking via beacon", '#', class: 'btn btn-success btn-lg btn-block' %>
+        <%= link_to "Download app to allow tracking via beacon", 'https://creator.ionic.io/share/9be786b005a0', class: 'btn btn-success btn-lg btn-block', target: '_blank' %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
 
-<div class="col-xs-10 col-xs-offset-1 features text-center">
-  <div class="col-sm-4">
-    <%= image_tag('demo.png') %>
-    <h3>Step 1</h3>
-  </div>
-  <div class="col-sm-4">
-    <%= image_tag('demo.png') %>
-    <h3>Step 2</h3>
-  </div>
-  <div class="col-sm-4">
-    <%= image_tag('demo.png') %>
-    <h3>Step 3</h3>
+<!-- <div class="col-xs-10 col-xs-offset-1 features text-center">
+<div class="col-sm-4">
+<%= image_tag('demo.png') %>
+<h3>Step 1</h3>
+</div>
+<div class="col-sm-4">
+<%= image_tag('demo.png') %>
+<h3>Step 2</h3>
+</div>
+<div class="col-sm-4">
+<%= image_tag('demo.png') %>
+<h3>Step 3</h3>
+</div>
+</div> -->
+
+<div id="feature">
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h3>How it works</h3>
+        <p>Our system provides an end-to-end health monitring and tracking for senior citizens.</p>
+      </div>
+      <div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+        <div class="text-center">
+          <div class="hi-icon-wrap hi-icon-effect">
+            <i class="fa fa-laptop"></i>
+            <h2>Profile</h2>
+            <p>Make an account and provide some profile details.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 wow fadeInRight" data-wow-offset="0" data-wow-delay="0.3s">
+        <div class="text-center">
+          <div class="hi-icon-wrap hi-icon-effect">
+            <i class="fa fa-heart-o"></i>
+            <h2>Health Tracking</h2>
+            <p>Integrate health fitness device to allow health monitoring.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
+        <div class="text-center">
+          <div class="hi-icon-wrap hi-icon-effect">
+            <i class="fa fa-database"></i>
+            <h2>Health Analytics</h2>
+            <p>We process your health data to monitor your vitals.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 wow fadeInLeft" data-wow-offset="0" data-wow-delay="0.3s">
+        <div class="text-center">
+          <div class="hi-icon-wrap hi-icon-effect">
+            <i class="fa fa-medkit"></i>
+            <h2>Emergency Help</h2>
+            <p>In case of emergency we send help to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+
+<div class="parallax-window">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="text-center">
+      <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.2s">
+        <h2>Subscribe to be a Rescuer</h2>
+      </div>
+      <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.6s">
+       <div class="form-group">
+          <!--<button type="subscribe" name="subscribe" class="btn btn-primary btn-lg" required="required">Subscribe</button>-->
+           <%= link_to "Subscribe", new_user_registration_path, class: 'btn btn-primary btn-lg' %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--<div class="sub-parallax">
+    <div class="text-center">
+      <div class="col-md-12">
+        <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.9s">
+          <form class="form-inline">
+            <div class="form-group">
+              <button type="purchase" name="purchase" class="btn btn-primary btn-lg" required="required">Purchase</button>
+            </div>
+            <div class="form-group">
+              <button type="subscribe" name="subscribe" class="btn btn-primary btn-lg" required="required">Subscribe Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>-->
+</div><!--/#parallax-window-->

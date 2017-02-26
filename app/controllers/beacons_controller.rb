@@ -1,19 +1,14 @@
-# require 'scan_beacon'
+# 
 # class BeaconsController < ApplicationController
-#
+#   require 'scan_beacon'
 #   def initialize
-#     scanner = ScanBeacon::BLE112Scanner.new
-#     scanner.scan do |beacons|
-#       beacons.each do |beacon|
-#         puts beacon.inspect
-#       end
+#     scan_beacon = ScanBeacon::CoreBluetoothScanner.new
 #   end
 #
 #   # def scan_beacon_now
 #   #   scanner = ScanBeacon::CoreBluetoothScanner.new cycle_seconds: 2
 #   #   beacons = scanner.scan
 #   # end
-#
 # end
 
 
