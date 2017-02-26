@@ -149,56 +149,15 @@ h1, h2, h3 {
 
 // Feature Section end
 
-/*************************
-*******parallax******
-**************************/
-
-.parallax-window {
-  min-height: 300px;
-  background-image: url('http://i.imgur.com/gDQDoSq.png');
-  // background: transparent;
+.banner {
+	padding: 100px 0;
+	background: url('http://i.imgur.com/MYIocLC.png') no-repeat center center;
+	background-size: cover;
 }
 
-.parallax-window .text-center h2 {
-  font-size:60px;
-  margin-top:90px;
-  padding-top:5px;
-  padding-bottom:5px;
-  color:#fff;
-}
-
-.parallax-window .text-center p {
-  color:#fff;
-  font-size:20px;
-}
-
-.sub-parallax .form-inline .form-group button[type="purchase"] {
-  padding:20px 90px;
-  font-size:20px;
-  background:#fff;
-  color:#0BA9F9;
-  border-color: #0BA9F9;
-}
-
-.sub-parallax .form-inline .form-group button[type="purchase"]:hover {
-  background:#0BA9F9;
-  color:#fff;
-  -webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
-
-.sub-parallax .form-inline .form-group button[type="subscribe"] {
-  padding:20px 90px;
-  font-size:20px;
-}
-
-.sub-parallax .form-inline .form-group button[type="subscribe"]:hover {
-  background:#fff;
-  color:#0BA9F9;
-  -webkit-transition: color 300ms, background-color 300ms;
-  -moz-transition: color 300ms, background-color 300ms;
-  -o-transition:  color 300ms, background-color 300ms;
-  transition:  color 300ms, background-color 300ms;
-}
+.banner h2 {
+		margin: 0;
+    color: white;
+		// text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+		font-size: 3em;
+	}
