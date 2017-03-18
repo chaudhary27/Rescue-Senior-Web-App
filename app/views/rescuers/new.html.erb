@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <h3 class="text-center">Become a rescuer</h3>
+    <p class="text-center">Help senior citizens in case of an emergency</p>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="well">
+        <%= form_for @rescuer do |f| %>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :phone %>
+          <%= f.text_field :phone, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :location %>
+          <%= f.text_field :location, class: "form-control", placeholder: "City, State" %>
+        </div>
+        <%= f.submit 'Submit', class: "btn btn-default" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
