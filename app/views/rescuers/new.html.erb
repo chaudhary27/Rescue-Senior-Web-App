@@ -7,15 +7,15 @@
         <%= form_for @rescuer do |f| %>
         <div class="form-group">
           <%= f.label :name %>
-          <%= f.text_field :name, class: "form-control" %>
+          <%= f.text_field :name, class: "form-control", placeholder: "Alex Gale" %>
         </div>
         <div class="form-group">
           <%= f.label :email %>
-          <%= f.text_field :email, class: "form-control" %>
+          <%= f.text_field :email, class: "form-control", placeholder: "gale@example.com"%>
         </div>
         <div class="form-group">
           <%= f.label :phone %>
-          <%= f.text_field :phone, class: "form-control" %>
+          <%= f.text_field :phone, class: "form-control", placeholder: "555-555-5555" %>
         </div>
         <div class="form-group">
           <%= f.label :location %>

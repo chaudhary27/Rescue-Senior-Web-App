@@ -5,18 +5,20 @@ class RescuersController < ApplicationController
   end
   
   def create
+    
     # Mass assignment of form fields into Rescuer object
     @rescuer = Rescuer.new(rescuer_params)
+    
     # Save the contact object to database
     if @rescuer.save
+      
       # store form fields via parameters, into variables
       name = params[:rescuer][:name]
       email = params[:rescuer][:email]
       phone = params[:rescuer][:phone]
-      location = params[:rescuer][:location]
-      # Plug variables into Contact Mailer
-      # email method and send email
       
+      # Plug variables into Rescuer Mailer
+      # email method and send email
       RescuerMailer.thankyou_email(name, email, phone).deliver
       
       # Store success message in flash hash

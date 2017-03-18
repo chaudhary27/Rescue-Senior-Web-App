@@ -12,4 +12,5 @@ ActionMailer::Base.smtp_settings = {
   :domain         => 'rescueseniors.herokuapp.com',
   :authentication => :plain
 }
+
 ActionMailer::Base.delivery_method = :smtp
