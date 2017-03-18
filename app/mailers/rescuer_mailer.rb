@@ -1,5 +1,5 @@
 class RescuerMailer < ActionMailer::Base
-  default from: 'noreply@rescuesenior.com'
+  default from: 'chaudhary.fsl@gmail.com'
   
   def thankyou_email(name, email, phone)
     @name = name
