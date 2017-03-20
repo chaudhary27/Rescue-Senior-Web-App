@@ -6,7 +6,7 @@ h/t {RescueSenior}[https://rescueseniors.herokuapp.com]
 == Toolkit
 Platform:: Ruby/Ruby on Rails
 Source Control:: Git/Github
-Database:: PostgreSQL
+Database:: Local - SQLite, Production: PostgreSQL
 Deployment Platform:: Heroku
 Front End Framework:: Bootstrap, HTML5/CSS3
 APIS Integration:: Google Maps/Estimote Beacons/Fitbit
