@@ -31,9 +31,8 @@ gem 'figaro', '1.1.1'
 
 gem 'paperclip', '4.3.6'
 
-gem 'proximity_beacon'
+gem 'bigbertha', '~> 0.0.5'
 
-gem 'scan_beacon', '~> 0.3.6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '3.0'
 # Use ActiveModel has_secure_password
