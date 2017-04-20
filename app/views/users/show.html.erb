@@ -9,6 +9,7 @@
 // window.onload = timedRefresh(10000);
 
 </script>
+
 <div class="container">
   <div class="row">
     <div class="col-md-3 text-center">
@@ -18,12 +19,19 @@
     <div class="col-md-6">
       <h1><%= @user.profile.first_name %>  <%= @user.profile.last_name %></h1> <br>
       <h3><span class="health-band-icon"><%= health_band_icon %></span> Tracking Health via <%= @user.profile.health_band %></h3>
+      <h3><span> <i class="fa fa-battery-full" aria-hidden="true"></i></span> Battery level: <%= @ref.child(:device_battery).val() %></h3>
       <div class="well profile-block profile-contact-info">
         <h3 class="text-center">Contact Information</h3> <br>
         <h4>Phone Number: <%= @user.profile.phone_number %> </h4>
         <h4>Age: <%= @user.profile.age %></h4>
         <h4>Height: <%= @user.profile.height_feet %>' <%= @user.profile.height_inches %>''</h4>
         <h4>Contact Email: <%= @user.profile.contact_email %></h4>
+        <hr>
+        <h3 class="text-center">Daily Stats</h3> <br>
+        <h4>Step Count: <%= @ref.child(:steps_count).val() %></h4>
+        <h4>Resting Heart Rate: <%= @ref.child(:resting_heart_rate).val() %> BPM</h4>
+        <h4>Inactive: <%= @ref.child(:inactive_minutes).val() %> mins</h4>
+        
       </div>
     </div>
     
@@ -33,44 +41,36 @@
       <div class="well profile-block profile-health-info-1">
         <h3 class="text-center">Realtime Health Data</h3><br>
         <h4>Zone: <%= @zone.child(:"0", :name).val %></h4>
-        <h4>BPM Range: <%= @zone.child(:"0", :max).val %>BPM - <%= @zone.child(:"0", :min).val %>BPM</h4>
+        <h4>BPM Range: <%= @zone.child(:"0", :max).val %> BPM - <%= @zone.child(:"0", :min).val %> BPM</h4>
         <h4>Time in range: <%= @zone.child(:"0", :minutes).val %> mins</h4>
         <h4>Calories count: <%= @zone.child(:"0", :calories_out).val %></h4>
-        <h4>Footstep count:</h4>
-        <h4>Skip Temperature:</h4>
       </div>
     </div>
     <div class="col-md-6 col-md-offset-3">
       <div class="well profile-block profile-health-info-2">
         <h3 class="text-center">Realtime Health Data</h3><br>
         <h4>Zone: <%= @zone.child(:"1", :name).val %></h4>
-        <h4>BPM Range: <%= @zone.child(:"1", :max).val %>BPM - <%= @zone.child(:"1", :min).val %>BPM</h4>
+        <h4>BPM Range: <%= @zone.child(:"1", :max).val %> BPM - <%= @zone.child(:"1", :min).val %> BPM</h4>
         <h4>Time in range: <%= @zone.child(:"1", :minutes).val %> mins</h4>
         <h4>Calories count: <%= @zone.child(:"1", :calories_out).val %></h4>
-        <h4>Footstep count:</h4>
-        <h4>Skip Temperature:</h4>
       </div>
     </div>
     <div class="col-md-6 col-md-offset-3">
       <div class="well profile-block profile-health-info-3">
         <h3 class="text-center">Realtime Health Data</h3><br>
         <h4>Zone: <%= @zone.child(:"2", :name).val %></h4>
-        <h4>BPM Range: <%= @zone.child(:"2", :max).val %>BPM - <%= @zone.child(:"2", :min).val %>BPM</h4>
+        <h4>BPM Range: <%= @zone.child(:"2", :max).val %> BPM - <%= @zone.child(:"2", :min).val %> BPM</h4>
         <h4>Time in range: <%= @zone.child(:"2", :minutes).val %> mins</h4>
         <h4>Calories count: <%= @zone.child(:"2", :calories_out).val %></h4>
-        <h4>Footstep count:</h4>
-        <h4>Skip Temperature:</h4>
       </div>
     </div>
     <div class="col-md-6 col-md-offset-3">
       <div class="well profile-block profile-health-info-4">
         <h3 class="text-center">Realtime Health Data</h3><br>
         <h4>Zone: <%= @zone.child(:"3", :name).val %></h4>
-        <h4>BPM Range: <%= @zone.child(:"3", :max).val %>BPM - <%= @zone.child(:"3", :min).val %>BPM</h4>
+        <h4>BPM Range: <%= @zone.child(:"3", :max).val %> BPM - <%= @zone.child(:"3", :min).val %> BPM</h4>
         <h4>Time in range: <%= @zone.child(:"3", :minutes).val %> mins</h4>
         <h4>Calories count: <%= @zone.child(:"3", :calories_out).val %></h4>
-        <h4>Footstep count:</h4>
-        <h4>Skip Temperature:</h4>
       </div>
     </div>
     

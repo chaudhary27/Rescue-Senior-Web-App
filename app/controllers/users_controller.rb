@@ -6,11 +6,8 @@ class UsersController < ApplicationController
     @user = User.find( params[:id] )
     @zone = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/heart_rate_zones" )
     beacon = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/userBeacon/Beacons/0/beacon" )
-    # @zone_name = zone.child(:name).val
-    # @max = zone.child(:max).val
-    # @min = zone.child(:min).val
-    # @minutes_in_zone = zone.child(:minutes).val
-    # @calories_count =zone.child(:calories_out).val
+    @ref = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/" )
+    
     
     @beacon_major = beacon.child(:major).val()
     @beacon_minor = beacon.child(:minor).val()
