@@ -1,12 +1,12 @@
 <!-- <meta HTTP-EQUIV="REFRESH" content="10";> -->
 <script type="text/JavaScript">
 
-function timedRefresh(timeoutPeriod) {
-  setTimeout("location.reload(true);",timeoutPeriod);
-  
-}
-
-window.onload = timedRefresh(10000);
+// function timedRefresh(timeoutPeriod) {
+//   setTimeout("location.reload(true);",timeoutPeriod);
+//
+// }
+//
+// window.onload = timedRefresh(10000);
 
 </script>
 <div class="container">
@@ -26,14 +26,49 @@ window.onload = timedRefresh(10000);
         <h4>Contact Email: <%= @user.profile.contact_email %></h4>
       </div>
     </div>
+    
+    <!--  <p><%= @zone.child(:"0", :name).val %></p>
+    <p><%= @zone.child(:"1", :name).val %></p> -->
     <div class="col-md-6 col-md-offset-3">
-      <div class="well profile-block profile-health-info">
+      <div class="well profile-block profile-health-info-1">
         <h3 class="text-center">Realtime Health Data</h3><br>
-        <!-- <i class="fa fa-heartbeat"></i> -->
-        <h4>Zone: <%=@zone_name%></h4>
-        <h4>BPM Range: <%= @min %>BPM - <%= @max %>BPM</h4>
-        <h4>Time in range: <%=@minutes_in_zone%> mins</h4>
-        <h4>Calories count: <%=@calories_count%></h4>
+        <h4>Zone: <%= @zone.child(:"0", :name).val %></h4>
+        <h4>BPM Range: <%= @zone.child(:"0", :max).val %>BPM - <%= @zone.child(:"0", :min).val %>BPM</h4>
+        <h4>Time in range: <%= @zone.child(:"0", :minutes).val %> mins</h4>
+        <h4>Calories count: <%= @zone.child(:"0", :calories_out).val %></h4>
+        <h4>Footstep count:</h4>
+        <h4>Skip Temperature:</h4>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well profile-block profile-health-info-2">
+        <h3 class="text-center">Realtime Health Data</h3><br>
+        <h4>Zone: <%= @zone.child(:"1", :name).val %></h4>
+        <h4>BPM Range: <%= @zone.child(:"1", :max).val %>BPM - <%= @zone.child(:"1", :min).val %>BPM</h4>
+        <h4>Time in range: <%= @zone.child(:"1", :minutes).val %> mins</h4>
+        <h4>Calories count: <%= @zone.child(:"1", :calories_out).val %></h4>
+        <h4>Footstep count:</h4>
+        <h4>Skip Temperature:</h4>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well profile-block profile-health-info-3">
+        <h3 class="text-center">Realtime Health Data</h3><br>
+        <h4>Zone: <%= @zone.child(:"2", :name).val %></h4>
+        <h4>BPM Range: <%= @zone.child(:"2", :max).val %>BPM - <%= @zone.child(:"2", :min).val %>BPM</h4>
+        <h4>Time in range: <%= @zone.child(:"2", :minutes).val %> mins</h4>
+        <h4>Calories count: <%= @zone.child(:"2", :calories_out).val %></h4>
+        <h4>Footstep count:</h4>
+        <h4>Skip Temperature:</h4>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well profile-block profile-health-info-4">
+        <h3 class="text-center">Realtime Health Data</h3><br>
+        <h4>Zone: <%= @zone.child(:"3", :name).val %></h4>
+        <h4>BPM Range: <%= @zone.child(:"3", :max).val %>BPM - <%= @zone.child(:"3", :min).val %>BPM</h4>
+        <h4>Time in range: <%= @zone.child(:"3", :minutes).val %> mins</h4>
+        <h4>Calories count: <%= @zone.child(:"3", :calories_out).val %></h4>
         <h4>Footstep count:</h4>
         <h4>Skip Temperature:</h4>
       </div>
@@ -49,8 +84,6 @@ window.onload = timedRefresh(10000);
         <h4>Beacon Tx: <%=@beacon_tx%> dBm</h4>
         <h4>Beacon Accuracy: <%= @beacon_accuracy %></h4>
         <h4>Beacon UUID: <%= @beacon_uuid %></h4>
-        
-        
       </div>
     </div>
     

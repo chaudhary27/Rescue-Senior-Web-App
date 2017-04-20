@@ -24,6 +24,7 @@ class RescuersController < ApplicationController
       # Store success message in flash hash
       # redirect to new action
       flash[:success] = "We will send you email confirmation. Thank you!"
+      
       redirect_to root_path
     else
       # if contact object doesn't save,
