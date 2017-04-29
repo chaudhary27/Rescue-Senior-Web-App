@@ -79,13 +79,23 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="well profile-block profile-location-info">
         <h3 class="text-center">Realtime Indoor Location</h3><br>
-        <!-- <i class="fa fa-heartbeat"></i> -->
-        <h4>Indoor Location: <%= @beacon_location %></h4>
-        <h4>Proximity: <%= @beacon_proximity %></h4>
-        <h4>Beacon Rssi: <%=@beacon_rssi%> dBm</h4>
-        <h4>Beacon Tx: <%=@beacon_tx%> dBm</h4>
-        <h4>Beacon Accuracy: <%= @beacon_accuracy %></h4>
-        <h4>Beacon UUID: <%= @beacon_uuid %></h4>
+        <% if (@beacon.child(:"0", :major).val == 16613 && @beacon.child(:"0", :minor).val == 25364) %>
+        <h4>Indoor Location: <%= @beacon_location_1 %></h4>
+        <h4>Address: <%= @beacon_location_1_addrss %></h4>
+        <h4><a href="https://www.google.com/maps/place/The+City+College+of+New+York:+North+Academic+Center/@40.8196351,-73.9527095,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f66570808709:0x9bad2a6bc19dfe6f!8m2!3d40.8196311!4d-73.9505155" target="_blank"><span class="label label-primary">Open Map</span></a></h4>
+        
+        <% elsif (@beacon.child(:"0", :major).val == 28803 && @beacon.child(:"0", :minor).val == 64459) %>
+        <h4>Indoor Location: <%= @beacon_location_2 %></h4>
+        <h4>Address: <%= @beacon_location_2_addrss %></h4>
+        <h4><a href="https://www.google.com/maps/place/The+City+College+of+New+York:+North+Academic+Center/@40.8196351,-73.9527095,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f66570808709:0x9bad2a6bc19dfe6f!8m2!3d40.8196311!4d-73.9505155" target="_blank"><span class="label label-primary">Open Map</span></a></h4>
+        <% end %>
+        
+        <h4>Proximity: <%= @beacon.child(:"0", :beacon, :proximity).val %></h4>
+        <h4>Beacon rssi: <%= @beacon.child(:"0", :rssi).val %></h4>
+        <h4>Beacon Tx: <%= @beacon.child(:"0", :beacon, :tx).val %></h4>
+        <h4>Beacon Accuracy: <%= @beacon.child(:"0", :beacon, :accuracy).val %></h4>
+        <h4>Beacon UUID: <%= @beacon.child(:"0", :beacon, :uuid).val %></h4>
+        <h4>Beacon Manufacturer: Estimote</h4>
       </div>
     </div>
     
