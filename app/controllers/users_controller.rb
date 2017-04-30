@@ -27,6 +27,7 @@ class UsersController < ApplicationController
     # @beacon_rssi = beacon.child(:rssi).val()
     # @beacon_tx = beacon.child(:tx).val()
     # @beacon_uuid = beacon.child(:uuid).val()
+    # redirect_to "http://localhost:3001"
   end
   
 end
