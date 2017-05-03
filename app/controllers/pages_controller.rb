@@ -8,18 +8,10 @@ class PagesController < ApplicationController
     
   end
   
-  # def heart_rate
-  #   @elements = []
-  #   (0..3).each do |z|
-  #     zone = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/heart_rate_zones/#{z}" )
-  #     @cal_data = zone.child(:calories_out).val
-  #     @elements.push(@cal_data)
-  #     @max = zone.child(:max).val
-  #     @elements.push(@max)
-  #     @min = zone.child(:min).val
-  #     @elements.push(@min)
-  #     @mins_in_region = zone.child(:minutes).val
-  #     @elements.push(@mins_in_region)
-  #   end
-  # end
+  def report
+    pdf_filename = File.join(Rails.root, "tmp/FinalReport.pdf")
+    send_file(pdf_filename, :filename => "FinalReport.pdf", :disposition => 'inline', :type => "application/pdf")
+  end
+  
+  
 end
