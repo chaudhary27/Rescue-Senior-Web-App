@@ -12,4 +12,8 @@ class PagesController < ApplicationController
     
   end
   
+  def presentation
+    
+  end
+  
 end

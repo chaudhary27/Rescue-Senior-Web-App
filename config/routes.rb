@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get 'about', to: 'pages#about'
   get 'report', to: 'pages#report'
+  get 'presentation', to: 'pages#presentation'
   resources :contacts, only: :create
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
   resources :rescuers
