@@ -6,7 +6,7 @@ Rails.application.configure do
   
   config.cache_classes = true
   
-  config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
+  # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   
   
   
