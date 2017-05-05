@@ -1,4 +1,4 @@
-<!-- <meta HTTP-EQUIV="REFRESH" content="15";> -->
+<!-- <meta HTTP-EQUIV="REFRESH" content="5";> -->
 <!-- <meta http-equiv="refresh" content="15" URL="http://localhost:3001"> -->
 <!-- <meta http-equiv="refresh" content="15"; URL="http://localhost:3001"> -->
 <script type="text/JavaScript">
@@ -80,13 +80,19 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="well profile-block profile-location-info">
         <h3 class="text-center">Realtime Indoor Location</h3><br>
+        
         <% if (@beacon.child(:"0", :major).val == 16613 && @beacon.child(:"0", :minor).val == 25364) %>
-        <h4>Indoor Location: <%= @beacon_location_1 %></h4>
+        <h4>Indoor Location: <span class="label label-success"><%= @beacon_location_1 %></span></h4>
         <h4>Address: <%= @beacon_location_1_addrss %></h4>
         <h4><a href="https://www.google.com/maps/place/The+City+College+of+New+York:+North+Academic+Center/@40.8196351,-73.9527095,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f66570808709:0x9bad2a6bc19dfe6f!8m2!3d40.8196311!4d-73.9505155" target="_blank"><span class="label label-primary">Open Map</span></a></h4>
         
         <% elsif (@beacon.child(:"0", :major).val == 28803 && @beacon.child(:"0", :minor).val == 64459) %>
-        <h4>Indoor Location: <%= @beacon_location_2 %></h4>
+        <h4>Indoor Location: <span class="label label-success"><%= @beacon_location_2 %></span></h4>
+        <h4>Address: <%= @beacon_location_2_addrss %></h4>
+        <h4><a href="https://www.google.com/maps/place/The+City+College+of+New+York:+North+Academic+Center/@40.8196351,-73.9527095,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f66570808709:0x9bad2a6bc19dfe6f!8m2!3d40.8196311!4d-73.9505155" target="_blank"><span class="label label-primary">Open Map</span></a></h4>
+        
+        <% elsif (@beacon.child(:"0", :major).val == 11480 && @beacon.child(:"0", :minor).val == 44233) %>
+        <h4>Indoor Location: <span class="label label-success"><%= @beacon_location_3 %></span></h4>
         <h4>Address: <%= @beacon_location_2_addrss %></h4>
         <h4><a href="https://www.google.com/maps/place/The+City+College+of+New+York:+North+Academic+Center/@40.8196351,-73.9527095,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2f66570808709:0x9bad2a6bc19dfe6f!8m2!3d40.8196311!4d-73.9505155" target="_blank"><span class="label label-primary">Open Map</span></a></h4>
         <% end %>

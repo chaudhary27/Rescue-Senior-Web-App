@@ -8,11 +8,14 @@ class UsersController < ApplicationController
     @zone = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/heart_rate_zones" )
     @beacon = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/userBeacon/Beacons" )
     
-    @beacon_location_1 = "NAC room 7/206"
-    @beacon_location_1_addrss = "Amsterdam Ave & 134th Street, New York, NY 10031"
+    @beacon_location_1 = "Dinning Room [1st Floor Room 102]"
+    @beacon_location_1_addrss = "Senior Citizen Living Condos, Upstate NYC 11103"
     
-    @beacon_location_2 = "NAC room 6/208"
-    @beacon_location_2_addrss = "Amsterdam Ave & 134th Street, New York, NY 10031"
+    @beacon_location_2 = "Bedroom [2nd Floor Room 20]"
+    @beacon_location_2_addrss = "Senior Citizen Living Condos, Upstate NYC 11103"
+    
+    @beacon_location_3 = "Gymnasium [3rd Floor Room 311]"
+    
     # @beacon_major = beacon.child(:major).val()
     # @beacon_minor = beacon.child(:minor).val()
     # if (@beacon_major == 16613 && @beacon_minor == 25364)
