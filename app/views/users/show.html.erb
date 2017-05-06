@@ -1,4 +1,4 @@
-<meta HTTP-EQUIV="REFRESH" content="5";>
+<meta HTTP-EQUIV="REFRESH" content="15";>
 <!-- <meta http-equiv="refresh" content="15" URL="http://localhost:3001"> -->
 <!-- <meta http-equiv="refresh" content="15"; URL="http://localhost:3001"> -->
 <script type="text/JavaScript">
@@ -22,8 +22,8 @@
       <h1><%= @user.profile.first_name %>  <%= @user.profile.last_name %></h1> <br>
       <h3><span class="health-band-icon"><%= health_band_icon %></span> Tracking Health via <%= @user.profile.health_band %> <%= @ref.child(:device).val() %></h3>
       <h3><span> <i class="fa fa-battery-full" aria-hidden="true"></i></span> Battery level: <%= @ref.child(:device_battery).val() %></h3>
-      <h4><a href="http://localhost:3000/users/1"><span class="label label-primary">Refresh Data</span></a></h4>
-      <h4><a href="http://localhost:3001" target="_blank"><span class="label label-danger">Authenticate Fitbit</span></a></h4> <br>
+      <h3><a href="http://localhost:3000/users/1"><span class="label label-primary">Refresh Data</span></a></h3>
+      <h3><a href="http://localhost:3001" target="_blank"><span class="label label-danger">Authenticate Fitbit</span></a></h3> <br>
       <div class="well profile-block profile-contact-info">
         <h3 class="text-center">Contact Information</h3> <br>
         <h4>Phone Number: <%= @user.profile.phone_number %> </h4>
@@ -32,10 +32,10 @@
         <h4>Contact Email: <%= @user.profile.contact_email %></h4>
         <hr>
         <h3 class="text-center">Daily Metrics</h3>
-        <h4>Last Synced: <%= @ref.child(:time_stamp).val() %></h4>
-        <h4>Step Count: <%= @ref.child(:steps_count).val() %></h4>
-        <h4>Resting Heart Rate: <%= @ref.child(:resting_heart_rate).val() %> BPM</h4>
-        <h4>Inactive: <%= @ref.child(:inactive_minutes).val() %> mins</h4>
+        <h4>Last Synced: <span class="label label-danger"><%= @ref.child(:time_stamp).val() %></span></h4>
+        <h4>Step Count: <span class="label label-success"><%= @ref.child(:steps_count).val() %></span></h4>
+        <h4>Resting Heart Rate: <span class="label label-default"><%= @ref.child(:resting_heart_rate).val() %></span> BPM</h4>
+        <h4>Inactive: <span class="label label-warning"><%= @ref.child(:inactive_minutes).val() %></span> mins</h4>
       </div>
     </div>
     <!--  <p><%= @zone.child(:"0", :name).val %></p>
