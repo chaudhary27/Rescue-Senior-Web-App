@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   def show
     @user = User.find( params[:id] )
     @ref = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/" )
-    @zone = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/heart_rate_zones" )
+    #Enable this after you can inspect the data in firbase cloud database
+    # @zone = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/heart_rate_zones" )
     @beacon = Bigbertha::Ref.new( "https://rescuesenior-d31bf.firebaseio.com/userBeacon/Beacons" )
     
     @beacon_location_1 = "Dinning Room [1st Floor Room 102]"
